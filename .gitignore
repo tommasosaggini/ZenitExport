@@ -1,0 +1,13 @@
+# Ignore WordPress core files (if you're not planning to modify them)
+wp-admin/
+wp-includes/
+
+# Ignore uploads and cache directories
+wp-content/uploads/
+wp-content/cache/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+wp-content/ai1wm-backups/
