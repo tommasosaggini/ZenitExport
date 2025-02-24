@@ -1,0 +1,698 @@
+/* Sticky Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth transition for background color and padding */
+    padding: 10px 0; /* Reduce initial padding for a more compact look */
+    display: flex; /* Flex container for aligning logo and menu */
+    align-items: center; /* Vertically align logo and menu items */
+    justify-content: space-between; /* Logo stays left, menu stays right */
+}
+
+/* Scrolled header state */
+header.scrolled {
+    background-color: white;  /* White background when scrolled */
+    padding: 5px 0;  /* Further reduce padding to make the header shorter */
+    box-shadow: none;  /* No shadow */
+}
+
+/* Container for the header */
+.header-container {
+    max-width: 1200px; /* Limit the container width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add side padding for spacing */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.site-logo {
+    display: flex;
+    align-items: center; /* Vertically align the logo */
+}
+
+.site-logo img {
+    max-width: 120px; /* Reduce the size of the logo to make it fit better */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures no extra margin or padding around the image */
+}
+
+/* Navigation menu styling */
+.main-navigation {
+    display: flex; /* Flex container for the menu */
+    align-items: center; /* Vertically center the navigation items */
+}
+
+/* Navigation Menu Items */
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-navigation ul li {
+    margin-left: 20px; /* Spacing between menu items */
+}
+
+.main-navigation ul li a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 400; /* Normal weight for menu links */
+    color: #222222;
+    font-size: 1rem;
+}
+
+.main-navigation ul li a:hover {
+    color: #800000; /* Adjust hover color to match your branding */
+}
+
+/* Add some padding to the top of the page content to avoid the header covering it */
+body {
+    padding-top: 100px; /* Adjust this based on your header height */
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;               /* Improved readability with proper line spacing */
+    color: #555;   
+}
+
+.container {
+    max-width: 1200px;               /* Limit the width of the content to 1200px */
+    margin: 0 auto;                  /* Center the container */
+    padding: 0 20px;                 /* Add padding for small devices */
+}
+
+h1, h2, h3 {
+    font-weight: 700;               /* Bold weight for headings */
+    color: #222;                    /* Slightly darker color for headings */
+    letter-spacing: 0.05em;         /* Adds spacing for a more elegant look */
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;               /* Normal weight for body text */
+    color: #222;                    /* Dark color for text */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.site-logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Hero section container */
+#hero {
+    background-color: white;         /* Set background to white */
+    height: 100vh;                   /* Full height of the viewport */
+    align-items: center;             /* Vertically center the text */
+    padding-top: 300px; /* Adjust this value to control the spacing */
+    text-align: left;
+}
+
+#hero .container {
+    padding-right: 20px;              /* Small right padding */
+}
+
+/* Main hero text (H1) */
+#hero .hero-text h1 {
+    color: #800000;                  /* Wine red color for the main text */
+    font-size: 3rem;                 /* Large text size */
+    font-weight: bold;               /* Bold font */
+    margin-bottom: 20px;             /* Space below the main text */
+    text-align: left;                /* Align the text to the left */
+}
+
+/* Subtext below the main hero text */
+#hero .hero-subtext {
+    color: #555;                     /* Subtext color: dark gray for contrast */
+    font-size: 1.2rem;               /* Smaller text size for the subtext */
+    max-width: 900px;                /* Limit the width for readability */
+    text-align: left;                /* Align the subtext to the left */
+    line-height: 1.6;                /* Increase line height for readability */
+}
+
+.hero-button {
+    margin-top: 40px;
+    background-color: #800000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Our Services Section */
+#our-services {
+    padding: 0px 20px 40px 0px;
+}
+
+#our-services h2 {
+    font-size: 2rem;
+    color: #222;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+/* Service item styling */
+.service-item {
+    display: flex;
+    align-items: stretch; /* Ensures image and text container stretch to same height */
+    margin-bottom: 40px;
+}
+
+/* Ensure the image has a fixed size */
+.service-item img {
+    width: 400px; /* Fixed width */
+    height: 267px; /* Fixed height (3:2 aspect ratio) */
+    object-fit: cover; /* Ensures the image fits the container without distortion */
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevent image shrinking */
+}
+
+/* Align the text container to the bottom of the image */
+.service-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align text (h3 and p) to the bottom */
+    padding-bottom: 10px; /* Extra space at the bottom of the text */
+    text-align: left;
+    flex-grow: 1; /* Ensure the text container grows to match the image height */
+}
+
+/* Styling for h3 and p inside the text */
+.service-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #800000; /* Wine red color for titles */
+}
+
+.service-text p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Add more spacing between the image and text */
+.service-text {
+    margin-left: 50px; /* Add extra space between image and text */
+}
+
+/* Mobile Responsiveness: Stack text above image */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column-reverse; /* Stack text above the image */
+        align-items: center;
+    }
+
+    .service-item img {
+        margin: 20px 0; /* Add space between the image and the text */
+    }
+
+    .service-text {
+        text-align: center; /* Center the text on mobile */
+        background-color: white; /* White background for better readability */
+        padding: 20px; /* Add padding to the text */
+        width: 100%;
+    }
+}
+
+/* Our Values Section */
+#values {
+    background-color: #ffffff; 
+    height: 100vh; /* Full height of viewport */
+    padding: 40px 0; /* Add some padding for better spacing */
+    color: 222; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#values h2 {
+    text-align: center;
+    margin-bottom: 40px; /* Space below title */
+    color: #800000;
+    font-size: 2rem;
+}
+
+/* Flex container for value items */
+.values-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align to the top of the container */
+    width: 100%;
+    padding: 0; /* Padding for left and right */
+}
+
+.value-item {
+    flex: 1; /* Each item takes equal space */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.value-item img {
+    width: 100%; /* Full width of container */
+    height: 400px; /* Fixed height to ensure uniformity */
+    object-fit: cover; /* Maintain aspect ratio and crop overflow */
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+/* Text Styling */
+.value-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #800000; /* White text for title */
+}
+
+.value-item p {
+    font-size: 1rem;
+    color: #222; /* Slightly lighter white for better readability */
+    line-height: 1.6; /* Add line spacing for better readability */
+    max-width: 90%; /* Limit paragraph width for readability */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #values {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 20px 0; /* Reduce padding for mobile */
+    }
+
+    .values-images {
+        flex-direction: column; /* Stack value items vertically on smaller screens */
+        gap: 40px; /* Increase space between items */
+    }
+
+    .value-item img {
+        height: 200px; /* Reduce image height for smaller screens */
+    }
+}
+
+/* Styling for the form columns */
+.form-column {
+    width: 48%; /* Each column takes up roughly half of the available space */
+}
+
+/* Styling for the form fields */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ensure each input field takes up the full width of its column */
+    padding: 10px 0; /* Space between text and bottom line */
+    margin-bottom: 20px;
+    border: none; /* Remove full border */
+    border-bottom: 1px solid #800000; /* Only a bottom border */
+    background-color: transparent; /* Ensure background is transparent */
+    font-size: 1rem;
+    outline: none; /* Remove default focus outline */
+}
+
+/* Make sure the textarea is taller */
+textarea {
+    height: 150px;
+    resize: none; /* Disable resizing */
+    margin-top: -10px; /* Align the textarea top with the email field */
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif; /* Ensure consistent font */
+    color: #555; /* Slightly darkened placeholder text */
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+    background-color: #800000; /* Wine red color for the submit button */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100px; /* Fixed width for the submit button */
+    display: block;
+    margin: 0 auto; /* Center the submit button */
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #ffcc00; /* Lighter color on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column; /* Stack the form columns on top of each other on small screens */
+    }
+
+    .form-column {
+        width: 100%; /* Each column takes up the full width */
+    }
+}
+
+header .main-navigation ul li a {
+    color: #222222;                   /* Changes the menu link color to white */
+}
+
+header .main-navigation ul li a:hover {
+    color: #800000;                 /* Changes the hover color (customize this) */
+}
+
+.site-logo a:hover {
+    color: #800000;                 /* Hover color for the logo */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .main-navigation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-navigation ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Footer Styles */
+#site-footer {
+    background-color: #222;
+    color: white; /* White text */
+    padding: 40px 0; /* Padding for spacing */
+}
+
+#site-footer .container {
+    max-width: 1200px; /* Container width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding for small screens */
+}
+
+/* Flexbox for the top part of the footer */
+.footer-top {
+    display: flex;
+    justify-content: space-between; /* Push company name left, social icons right */
+    align-items: center; /* Vertically center the content */
+    margin-bottom: 20px;
+}
+
+/* Company name styling */
+#site-footer h3 {
+    font-size: 1.8rem;
+    color: white;
+}
+
+#site-footer p {
+    color: white;
+}
+
+/* Social Media Icons */
+#site-footer .social-media a {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for social media icons */
+#site-footer .social-media a:hover {
+    color: #800000; /* Yellow color on hover */
+}
+
+/* Email and Links */
+#site-footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#site-footer a:hover {
+    color: #800000;
+}
+
+/* Adjust spacing between footer sections */
+.footer-section {
+    margin-bottom: 20px;
+}
+
+/* Make the footer responsive */
+@media (max-width: 768px) {
+    /* Stack the company name and social media icons on mobile */
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-top .social-media {
+        margin-top: 15px; /* Add spacing between sections on mobile */
+    }
+
+    /* Adjust footer section spacing */
+    .footer-section {
+        margin-bottom: 15px;
+    }
+}
+
+/* Wine Catalogue Styles */
+#wine-catalogue {
+    padding: 60px 20px;
+}
+
+/* Centering the headline in the Catalogue page */
+#wine-catalogue h1 {
+    text-align: center;
+    margin-bottom: 40px; /* Optional: Add spacing below the headline */
+}
+
+.wine-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.wine-item {
+    width: 30%; /* Three columns */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.wine-item a {
+    text-decoration: none;
+    color: #222;
+    font: bolder;
+    justify-content: center;
+}
+
+.wine-item a:hover {
+    color: #800000; /* Add hover effect if needed (optional) */
+}
+
+.wine-thumbnail {
+    height: 300px;  /* Desired height */
+    overflow: hidden;
+    margin: 0 auto; /* Center container if needed */
+}
+
+.wine-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* Crop the image to fill the container */
+}
+
+.wine-name {
+    margin-top: 10px;
+}
+
+/* Single Wine Page Styles */
+#single-wine {
+    padding: 60px 20px;
+}
+
+.wine-content {
+    display: flex;
+    gap: 40px; /* Space between image and info */
+}
+
+.wine-image {
+    height: 400px; /* Fixed height for the container */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden; /* Hides any parts that exceed the container */
+    padding-right: 100px;
+}
+
+.wine-image img {
+    height: 100%; /* Image fills the container's height */
+    width: auto;  /* Width adjusts to maintain aspect ratio */
+    object-fit: contain; /* Ensures the entire image is visible */
+}
+
+.wine-info {
+    flex: 1; /* Info takes up equal space */
+}
+
+.wine-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.wine-details {
+    list-style: none;
+    padding: 0;
+}
+
+.wine-details li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.wine-details li strong {
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wine-content {
+        flex-direction: column;
+    }
+
+    .wine-image, .wine-info {
+        width: 100%;
+    }
+}
+
+.wine-details {
+    margin-top: 20px;
+}
+
+/* Contact Page Layout */
+
+#contact-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 10px; /* Add some padding */
+}
+
+/* Flexbox for two columns */
+.contact-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; /* Space between columns */
+}
+
+#contact-page h2 {
+    font-size: 2rem; /* Adjust this size as needed */
+    font-weight: bold; /* Make the font bold if desired */
+    color: #222; /* Ensure consistent color */
+}
+
+/* Contact Info (Left Column) */
+.contact-info {
+    flex: 1; /* Take up equal space */
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: #800000;
+    text-decoration: none;
+}
+
+/* Contact Form (Right Column) */
+.contact-form {
+    flex: 1; /* Take up equal space */
+}
+
+/* Form input styles - inherit from Home Page */
+#contact-page input[type="text"],
+#contact-page input[type="email"],
+#contact-page textarea {
+    width: 100%;
+    border: none; /* Remove the full border */
+    border-bottom: 0.5px solid #800000; /* Add bottom border only */
+    background-color: transparent; /* Ensure the background is transparent */
+    padding: 10px 0; /* Space between text and bottom border */
+    margin-bottom: 20px; /* Spacing between input fields */
+    font-size: 1rem; /* Adjust font size */
+    outline: none; /* Remove outline when focused */
+}
+
+#contact-page textarea {
+    height: 150px; /* Set height for the message field */
+}
+
+/* Focus state for inputs */
+#contact-page input[type="text"]:focus,
+#contact-page input[type="email"]:focus,
+#contact-page textarea:focus {
+    border-bottom: 2px solid #ffcc00; /* Change bottom border color on focus */
+}
+
+/* Submit button styles */
+#contact-page input[type="submit"] {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact-page input[type="submit"]:hover {
+    background-color: #ffcc00; /* Change color on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .contact-columns {
+        flex-direction: column; /* Stack columns on small screens */
+    }
+
+    .contact-form, .contact-info {
+        flex: unset; /* Remove flex sizing */
+        width: 100%; /* Full width on small screens */
+    }
+
+    .contact-form {
+        margin-top: 30px; /* Add spacing between sections */
+    }
+}
+
+.wine-divider {
+    width: 100%;
+    border-bottom: 0.5px solid #800000;
+    margin: 20px 0; /* Adjust spacing as needed */
+}
