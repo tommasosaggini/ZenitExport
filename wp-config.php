@@ -27,7 +27,7 @@ define( 'DB_NAME', 'rabiksmy_WP5KP' );
 define( 'DB_USER', 'rabiksmy_WP5KP' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'mxQR3!Tpd!RBf@2' );
+define( 'DB_PASSWORD', '}0KvZ^~Le?eP' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
