@@ -9,3 +9,5 @@ wp-content/cache/
 # Ignore OS-specific files
 .DS_Store
 Thumbs.db
+
+wp-content/ai1wm-backups/

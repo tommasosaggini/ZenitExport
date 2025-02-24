@@ -8,7 +8,7 @@ get_header();
         <div class="hero-text">
             <!-- Main Text -->
             <h1>Effortless International Wine Trade</h1>
-            <p class="hero-subtext">Zenit specializes in the seamless import and export of your wine across the globe. Our dedicated advisors manage every step—from buying and selling to shipping and paperwork—ensuring your transactions are hassle-free</p>
+            <p class="hero-subtext">Zenit Export specializes in the seamless import and export of your wine across the globe. Our dedicated advisors manage every step—from buying and selling to shipping and paperwork—ensuring your transactions are hassle-free</p>
             <a href="#contact-form" class="hero-button">Get in Touch</a>
         </div>
     </div>
