@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - echo "Starting deployment..."
-    - /usr/bin/rsync -av --exclude='.git' ./ /home/rabiksmy/public_html/
+    - /usr/bin/rsync -av --exclude='.git' ./ /home1/rabiksmy/public_html/
     - echo "Deployment completed."
